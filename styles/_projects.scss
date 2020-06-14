@@ -1,0 +1,16 @@
+.projects {
+  width: 90%;
+  min-height: 90vh;
+  margin: auto;
+  @include flex(space-between, center, row);
+  text-align: center;
+  flex-wrap: wrap;
+  h2 {
+    margin: 5rem;
+  }
+}
+
+.travelify,
+.alinax {
+  flex: 1 1 40rem;
+}

@@ -1,0 +1,109 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 50%;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  h2 {
+    font-size: 8rem;
+    padding-top: 5rem;
+  }
+  h3 {
+    font-size: 6rem;
+    padding: 2rem 0;
+  }
+  p {
+    padding-top: 2rem;
+    color: $grey-text;
+  }
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin-right: 5rem;
+  }
+}
+
+.active {
+  background: $grey-text;
+  color: aliceblue;
+  padding: 1rem 3rem;
+  border-radius: 3rem;
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+// Animating Plants
+
+#plant-left {
+  animation: plant 1.5s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+#plant-right {
+  animation: plant 1.5s ease-in-out 0.5s infinite alternate;
+}
+
+#me {
+  animation: me 1s ease-in-out infinite alternate;
+  transform-origin: bottom;
+}
+#clock-arrow {
+  animation: clock-arrow 3s linear 0.5s infinite;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes clock-arrow {
+  from {
+    transform: rotateZ(0deg);
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+@keyframes me {
+  from {
+    transform: rotateZ(-10deg);
+  }
+  to {
+    transform: rotateZ(0);
+  }
+}
+@keyframes plant {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-35%);
+  }
+}

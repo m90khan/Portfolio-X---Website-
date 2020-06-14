@@ -1,0 +1,68 @@
+.form-wrap {
+  min-height: 80vh;
+  @include flex(center, center, row);
+  margin-top: 5rem;
+  form {
+    padding: 3rem 10rem;
+    @include flex(center, center, column);
+    box-shadow: 0px 10px 10px rgba($color: #000, $alpha: 0.2),
+      0px 20px 40px rgba($color: #000, $alpha: 0.2);
+    border-radius: 2rem;
+    input,
+    textarea {
+      width: 100%;
+      margin: 2rem;
+      padding: 1rem;
+      &:focus {
+        outline: 2px solid #000;
+      }
+    }
+    textarea {
+      font-family: "Montserrat", sans-serif;
+      font-size: 2.4rem;
+      font-weight: 500;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 2rem 6rem;
+      background: #fff;
+      border: none;
+      color: #000;
+      font-size: 2.4rem;
+      border: 3px solid #000;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      margin-bottom: 2rem;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+      &:focus {
+        background: #131c27;
+        outline-style: solid;
+      }
+    }
+  }
+}
+
+.btn {
+  width: 100%;
+  padding: 2rem 6rem;
+  background: #fff;
+  border: none;
+  color: #000;
+  font-size: 2.4rem;
+  border: 3px solid #000;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  margin-bottom: 2rem;
+  &:hover {
+    background: #000;
+    color: #fff;
+  }
+  &:focus {
+    background: #131c27;
+    outline-style: solid;
+  }
+}
